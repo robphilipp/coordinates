@@ -12,14 +12,17 @@ scalacOptions ++= Seq(
 //
 lazy val commonSettings = Seq(
   organization := "com.digitalcipher.spiked",
-  version := "0.0.1-snapshot",
+  version := "0.0.1",
   scalaVersion := "2.12.7"
 )
 
 lazy val app = (project in file(".")).
   settings(commonSettings: _*).
   settings(
-    name := "spikes",
+    name := "spikes-coords",
+
+    // package as a jar file
+    exportJars := true,
 
     //
     // dependencies
