@@ -12,7 +12,7 @@ scalacOptions ++= Seq(
 //
 lazy val commonSettings = Seq(
   organization := "com.digitalcipher.spiked",
-  version := "0.0.2-snapshot",
+  version := "0.0.2",
   scalaVersion := "2.12.7"
 )
 
