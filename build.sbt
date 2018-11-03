@@ -19,7 +19,10 @@ lazy val commonSettings = Seq(
 lazy val app = (project in file(".")).
   settings(commonSettings: _*).
   settings(
-    name := "spikes",
+    name := "spikes-coords",
+
+    // package as a jar file
+    exportJars := true,
 
     //
     // dependencies
