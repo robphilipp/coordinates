@@ -9,19 +9,18 @@ import org.scalactic.Equality
   */
 class DimensionlessCoordTest extends BaseSpec {
 
-
   implicit val cartesianEqual: Equality[Cartesian] = (a: Cartesian, b: Any) => b match {
-    case coord: Cartesian => coord.point._1 === a.point._1 && coord.point._2 === a.point._2 &&coord.point._3 === a.point._3 +- 1e-15
+    case coord: Cartesian => coord.point._1 === a.point._1 +- 1e-15 && coord.point._2 === a.point._2 +- 1e-15 && coord.point._3 === a.point._3 +- 1e-15
     case _ => false
   }
 
   implicit val cylindricalEqual: Equality[Cylindrical] = (a: Cylindrical, b: Any) => b match {
-    case coord: Cylindrical => coord.point._1 === a.point._1 && coord.point._2 === a.point._2 &&coord.point._3 === a.point._3 +- 1e-15
+    case coord: Cylindrical => coord.point._1 === a.point._1 +- 1e-15 && coord.point._2 === a.point._2 +- 1e-15 && coord.point._3 === a.point._3 +- 1e-15
     case _ => false
   }
 
   implicit val sphericalEqual: Equality[Spherical] = (a: Spherical, b: Any) => b match {
-    case coord: Spherical => coord.point._1 === a.point._1 && coord.point._2 === a.point._2 &&coord.point._3 === a.point._3 +- 1e-15
+    case coord: Spherical => coord.point._1 === a.point._1 +- 1e-15 && coord.point._2 === a.point._2 +- 1e-15 && coord.point._3 === a.point._3 +- 1e-15
     case _ => false
   }
 
