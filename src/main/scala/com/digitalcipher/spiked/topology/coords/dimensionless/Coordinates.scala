@@ -30,7 +30,7 @@ object Coordinates {
       * @param coordinate The coordinate to subtract from this one
       * @return The difference coordinate (vector) (this - specified)
       */
-    override def -(coordinate: Coordinate[Double, Double, Double, Double]): Coordinate[Double, Double, Double, Double] =
+    override def -(coordinate: Coordinate[Double, Double, Double, Double]): Cartesian =
       new Cartesian(point.subtract(coordinate.point).tuple)
 
     /**
@@ -39,7 +39,7 @@ object Coordinates {
       * @param coordinate The coordinate to add to this one
       * @return The sum of the two coordinates
       */
-    override def +(coordinate: Coordinate[Double, Double, Double, Double]): Coordinate[Double, Double, Double, Double] =
+    override def +(coordinate: Coordinate[Double, Double, Double, Double]): Cartesian =
       new Cartesian(point.add(coordinate.point).tuple)
 
     /**
@@ -66,7 +66,7 @@ object Coordinates {
       * @param coordinate The coordinate to subtract from this one
       * @return The difference coordinate (vector) (this - specified)
       */
-    override def -(coordinate: Coordinate[Double, Double, Double, Double]): Coordinate[Double, Double, Double, Double] =
+    override def -(coordinate: Coordinate[Double, Double, Double, Double]): Cylindrical =
       Cylindrical(point.subtract(coordinate.point).tuple)
 
     /**
@@ -75,7 +75,7 @@ object Coordinates {
       * @param coordinate The coordinate to add to this one
       * @return The sum of the two coordinates
       */
-    override def +(coordinate: Coordinate[Double, Double, Double, Double]): Coordinate[Double, Double, Double, Double] =
+    override def +(coordinate: Coordinate[Double, Double, Double, Double]): Cylindrical =
       Cylindrical(point.add(coordinate.point).tuple)
 
     /**
@@ -85,7 +85,7 @@ object Coordinates {
   }
 
   /**
-    * Spherical coordiantes The point (r, φ, θ) is based an standard physics usage where
+    * Spherical coordinates The point (r, φ, θ) is based an standard physics usage where
     * <ul>
     *   <li>r is the radial length</li>
     *   <li>φ is the angle between the x-axis and the projection of r onto the x-y plane</li>
@@ -105,7 +105,7 @@ object Coordinates {
       * @param coordinate The coordinate to subtract from this one
       * @return The difference coordinate (vector) (this - specified)
       */
-    override def -(coordinate: Coordinate[Double, Double, Double, Double]): Coordinate[Double, Double, Double, Double] =
+    override def -(coordinate: Coordinate[Double, Double, Double, Double]): Spherical =
       Spherical(point.subtract(coordinate.point).tuple)
 
     /**
@@ -114,7 +114,7 @@ object Coordinates {
       * @param coordinate The coordinate to add to this one
       * @return The sum of the two coordinates
       */
-    override def +(coordinate: Coordinate[Double, Double, Double, Double]): Coordinate[Double, Double, Double, Double] =
+    override def +(coordinate: Coordinate[Double, Double, Double, Double]): Spherical =
       Spherical(point.add(coordinate.point).tuple)
 
     /**

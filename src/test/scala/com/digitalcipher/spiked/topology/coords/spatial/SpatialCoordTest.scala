@@ -1,16 +1,14 @@
-package spiked.topology.coords.spatial
+package com.digitalcipher.spiked.topology.coords.spatial
 
+import com.digitalcipher.spiked.BaseSpec
 import com.digitalcipher.spiked.topology.coords.spatial
 import com.digitalcipher.spiked.topology.coords.spatial.Coordinates.{Cartesian, Cylindrical, Spherical}
-import spiked.BaseSpec
 import squants.space.{Length, Microns, Nanometers, Radians}
 
 /**
   * Created by rob on 12/26/16.
   */
 class SpatialCoordTest extends BaseSpec {
-
-  import com.digitalcipher.spiked.topology.coords.spatial._
 
   "A unit vector" should "have length 1 mm" in {
     assert(Cartesian(1, 0, 0).norm == Microns(1))
