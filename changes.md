@@ -1,5 +1,8 @@
 # version history
 
+## release 0.1.1 (updated version)
+1.  Updated the version in the `readme.md`
+
 ## release 0.1.0 (operator return type; tests)
 1.  Updated the return types of the "-" and "+" operators to return the more specific
     coordinate type.

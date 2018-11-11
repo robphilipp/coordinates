@@ -6,7 +6,7 @@
 The `spikes-coords` library can be found on maven central at
 
 ```sbtshell
-libraryDependencies += "com.digitalcipher.spiked" % "spikes-coords_2.12" % "0.0.2"
+libraryDependencies += "com.digitalcipher.spiked" % "spikes-coords_2.12" % "0.1.1"
 ```
 
 ## motivation
