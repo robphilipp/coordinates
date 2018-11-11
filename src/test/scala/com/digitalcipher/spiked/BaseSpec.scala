@@ -1,4 +1,4 @@
-package spiked
+package com.digitalcipher.spiked
 
 import org.scalatest._
 

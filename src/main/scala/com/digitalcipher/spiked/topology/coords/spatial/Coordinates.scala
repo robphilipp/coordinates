@@ -32,7 +32,7 @@ object Coordinates {
       * @param coordinate The coordinate to subtract from this one
       * @return The difference coordinate (vector) (this - specified)
       */
-    override def -(coordinate: Coordinate[Length, Length, Length, Length]): Coordinate[Length, Length, Length, Length] =
+    override def -(coordinate: Coordinate[Length, Length, Length, Length]): Cartesian =
       new Cartesian(point.subtract(coordinate.point).tuple)
 
     /**
@@ -41,7 +41,7 @@ object Coordinates {
       * @param coordinate The coordinate to add to this one
       * @return The sum of the two coordinates
       */
-    override def +(coordinate: Coordinate[Length, Length, Length, Length]): Coordinate[Length, Length, Length, Length] =
+    override def +(coordinate: Coordinate[Length, Length, Length, Length]): Cartesian =
       new Cartesian(point.add(coordinate.point).tuple)
 
     /**
@@ -89,7 +89,7 @@ object Coordinates {
       * @param coordinate The coordinate to subtract from this one
       * @return The difference coordinate (vector) (this - specified)
       */
-    override def -(coordinate: Coordinate[Length, Length, Angle, Length]): Coordinate[Length, Length, Angle, Length] =
+    override def -(coordinate: Coordinate[Length, Length, Angle, Length]): Cylindrical =
       Cylindrical(point.subtract(coordinate.point).tuple)
 
     /**
@@ -98,7 +98,7 @@ object Coordinates {
       * @param coordinate The coordinate to add to this one
       * @return The sum of the two coordinates
       */
-    override def +(coordinate: Coordinate[Length, Length, Angle, Length]): Coordinate[Length, Length, Angle, Length] =
+    override def +(coordinate: Coordinate[Length, Length, Angle, Length]): Cylindrical =
       Cylindrical(point.add(coordinate.point).tuple)
 
     /**
@@ -150,7 +150,7 @@ object Coordinates {
       * @param coordinate The coordinate to subtract from this one
       * @return The difference coordinate (vector) (this - specified)
       */
-    override def -(coordinate: Coordinate[Length, Length, Angle, Angle]): Coordinate[Length, Length, Angle, Angle] =
+    override def -(coordinate: Coordinate[Length, Length, Angle, Angle]): Spherical =
       Spherical(point.subtract(coordinate.point).tuple)
 
     /**
@@ -159,7 +159,7 @@ object Coordinates {
       * @param coordinate The coordinate to add to this one
       * @return The sum of the two coordinates
       */
-    override def +(coordinate: Coordinate[Length, Length, Angle, Angle]): Coordinate[Length, Length, Angle, Angle] =
+    override def +(coordinate: Coordinate[Length, Length, Angle, Angle]): Spherical =
       Spherical(point.add(coordinate.point).tuple)
 
     /**
