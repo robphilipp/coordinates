@@ -39,6 +39,11 @@ class SpatialCoordTest extends BaseSpec {
     Spherical(1, math.Pi, 0).norm should be (Microns(1))
 
     Spherical(Microns(1), Radians(0), Radians(0)).norm should be (Microns(1))
+
+    import scala.language.postfixOps
+    import squants.space.LengthConversions._
+    import squants.space.AngleConversions._
+    Spherical(1 µm, 0 radians, 0 radians).norm should be (1 µm)
   }
 
   "A cartesian coordinate added to a cylindrical coordinate" should "yield a cartesian coordinate that is the sum of the two" in {
@@ -53,6 +58,12 @@ class SpatialCoordTest extends BaseSpec {
 
   "A cylindrical coordinate converted to a cartesian coordinate" should "yield a cartesian coordinate" in {
     toCartesian(Cylindrical(1, 0, 1)) should equal(Cartesian(1, 0, 1))
+
+    import scala.language.postfixOps
+    import squants.space.LengthConversions._
+    import squants.space.AngleConversions._
+    toCartesian(Cylindrical(1 µm, 0 radians, 1 µm)) should equal(Cartesian(1 µm, 0 µm, 1 µm))
+    toCartesian(Cylindrical(1 µm, math.Pi / 2 radians, 0 µm)) should equal(Cartesian(0 µm, 1 µm, 0 µm))
   }
 
   "A cylindrical coordinate converted to a cartesian coordinate and then back to a cylindrical coordinate" should "match the original coordinate" in {
